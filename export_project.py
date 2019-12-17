@@ -16,7 +16,7 @@ data = {
 r = requests.post(['api_url_here'], data)
 print(r.text)
 
-with open('records.json', 'w') as file:
+with open('project.json', 'w') as file:
     file.write(r.text)
 
 
@@ -40,5 +40,5 @@ r = requests.post(['api_url_here'], data)
 df = pd.read_csv(StringIO(r.text))
 print(df)
 
-with open('records.csv', 'w') as file:
+with open('project.csv', 'w') as file:
     file.write(r.text)
